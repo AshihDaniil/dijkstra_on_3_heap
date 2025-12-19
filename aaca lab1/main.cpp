@@ -304,11 +304,6 @@ public:
             }
             attempts++;
         }
-
-        if (edgesAdded < m) {
-            std::cout << "  Предупреждение: сгенерировано " << edgesAdded
-                << " ребер вместо " << m << " (n=" << n << ")\n";
-        }
     }
 };
 
@@ -524,7 +519,6 @@ void runExperiment3_4() {
             graphDense.labels(0);
             });
 
-        // б) Разреженный граф: m ≈ 1000*n
         Graph graphSparse(n);
         int target_m_sparse = 1000 * n;
 
